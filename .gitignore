@@ -2,4 +2,31 @@
 __pycache__/
 *.pyc
 *.ipynb_checkpoints/
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
 
+# Виртуальные окружения
+.venv/
+env/
+venv/
+ENV/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Логи и кеши
+*.log
+*.tmp
+*.swp
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# Torch / Transformers артефакты
+*.bin
+*.safetensors
+*.pt
+
+# Google Colab
+.colab/
