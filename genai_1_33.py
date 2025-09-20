@@ -1,9 +1,9 @@
-# advice_generator.py
 import re
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 MODEL_NAME = "sambanovasystems/SambaLingo-Russian-Chat"
+
 
 def load_model_and_tokenizer(model_name: str = MODEL_NAME):
     """
@@ -80,3 +80,20 @@ def generate_advice(request: str, tokenizer, model) -> str:
         if len(tips) == num:
             break
     return "\n".join(tips) if tips else text
+
+
+def run_interactive():
+    """
+    Запускает интерактивный режим: спрашивает промт и выводит советы.
+    """
+    tokenizer, model = load_model_and_tokenizer()
+    request = input("Привет! Введи свой промт и я дам тебе совет:\n> ").strip()
+    print("\n=== Сгенерированные советы ===\n")
+    try:
+        print(generate_advice(request, tokenizer, model))
+    except Exception as e:
+        print(f"Ошибка: {e}")
+
+
+if __name__ == "__main__":
+    run_interactive()
