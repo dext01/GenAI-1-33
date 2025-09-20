@@ -30,6 +30,7 @@
 Нажмите на кнопку, чтобы открыть проект в Colab и протестировать:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dext01/GenAI-1-33/blob/main/GenAI-1-33.ipynb)
+
 0. Создайте файл расширением `.ipynb`.
 1. Подключите GPU (**Среда выполнения → Сменить среду выполнения → Графический процессор T4**).
 2. Скачайте код проекта прямо в среду:
